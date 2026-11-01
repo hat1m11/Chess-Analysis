@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Chess Game Review</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2 2'%3E%3Crect width='2' height='2' fill='%23fff'/%3E%3Crect width='1' height='1' fill='%23111'/%3E%3Crect x='1' y='1' width='1' height='1' fill='%23111'/%3E%3C/svg%3E" />
+    <link rel="stylesheet" href="/vendor/@fontsource/geist-sans/latin-400.css" />
+    <link rel="stylesheet" href="/vendor/@fontsource/geist-sans/latin-500.css" />
+    <link rel="stylesheet" href="/vendor/@fontsource/geist-sans/latin-600.css" />
+    <link rel="stylesheet" href="/vendor/chessground/assets/chessground.cburnett.css" />
+    <link rel="stylesheet" href="/styles.css" />
+    <script type="importmap">
+      { "imports": { "chess.js": "/vendor/chess.js/dist/esm/chess.js" } }
+    </script>
+    <script type="module" src="/src/app.js"></script>
+  </head>
+  <body>
+    <main>
+      <div id="home">
+        <header class="top">
+          <a class="brand" href="/">Chess Game Review</a>
+          <div class="search-block">
+            <h1 id="tagline">Review any Chess.com game</h1>
+            <p id="intro" class="muted">Enter a username to find every blunder, mistake and great move in their last 5 games.</p>
+            <form id="search-form" autocomplete="off">
+              <label for="username" class="visually-hidden">Chess.com username or profile link</label>
+              <input id="username" name="username" type="text" placeholder="Chess.com username" spellcheck="false" autocapitalize="none" required />
+              <button type="submit" class="primary">Search</button>
+            </form>
+            <div id="samples" class="samples"></div>
+            <p id="status" role="status" aria-live="polite"></p>
+          </div>
+        </header>
+        <div id="profile" class="wrap"></div>
+        <div id="results" class="wrap"></div>
+      </div>
+      <div id="review" hidden></div>
+    </main>
+  </body>
+</html>
