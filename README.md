@@ -25,8 +25,8 @@ There's no account or API key to set up, and no server doing the analysis. The e
 You need [Node.js](https://nodejs.org). The app was developed and tested on Node 24.
 
 ```bash
-git clone <your-repo-url>
-cd my-chess-sigma
+git clone https://github.com/hat1m11/Chess-Analysis.git
+cd Chess-Analysis
 npm install
 npm start
 ```
